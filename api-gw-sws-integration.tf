@@ -14,13 +14,13 @@ locals {
 
   # Settings for the Smart Web Security profile
   sws_name    = ""     # Name of the Smart Web Security profile
-  allowed_ips = ["", ] # List of the allowed IP addresses
+  allowed_ips = ["", ""] # List of the allowed IP addresses
 
   # Settings for the API gateway
   api-gw-name = "" # Name of the API gateway
 
-  # This settings enables creation of the API gateway. Change it only after ARL and SWS profiles have been created.
-  create-api-gw = 0 # Set this settings to 1 to enable creation of the API gateway
+  # This setting enables creation of the API gateway. Change it only after ARL and SWS profiles have been created.
+  create-api-gw = 0 # Set this setting to 1 to enable creation of the API gateway
 }
 
 resource "yandex_sws_advanced_rate_limiter_profile" "my-arl-profile" {
