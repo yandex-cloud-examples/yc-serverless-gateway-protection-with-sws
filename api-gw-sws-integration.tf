@@ -73,6 +73,9 @@ resource "yandex_sws_security_profile" "my-sws-profile" {
       }
     }
   }
+  depends_on = [
+    yandex_api_gateway.test-api-gateways    
+  ]
 }
 
 resource "yandex_api_gateway" "test-api-gateways" {
