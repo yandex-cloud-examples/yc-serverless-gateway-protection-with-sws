@@ -83,7 +83,7 @@ resource "yandex_api_gateway" "test-api-gateways" {
     openapi: "3.0.0"
     x-yc-apigateway:
       smartWebSecurity:
-        securityProfileId: fevoqg0ull8hknaelvj6
+        securityProfileId: <идентификатор_профиля_Smart_Web_Security>
     info:
       version: 1.0.0
       title: Protected application
