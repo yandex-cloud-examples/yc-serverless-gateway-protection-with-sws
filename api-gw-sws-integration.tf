@@ -72,10 +72,7 @@ resource "yandex_sws_security_profile" "my-sws-profile" {
         }
       }
     }
-  }
-  depends_on = [
-    yandex_api_gateway.test-api-gateways    
-  ]
+  }  
 }
 
 resource "yandex_api_gateway" "test-api-gateways" {
@@ -101,4 +98,9 @@ resource "yandex_api_gateway" "test-api-gateways" {
               '*': "This application is protected by SWS!"
             http_code: 200
   EOT
+
+  # Sets gateway dependency so that the gateway will be removed before the SWS security profile
+  depends_on = [
+    yandex_sws_security_profile.my-sws-profile
+  ]  
 }
