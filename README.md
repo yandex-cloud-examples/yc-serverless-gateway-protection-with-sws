@@ -1,5 +1,3 @@
-# Название сценария
+# Защита API Gateway при помощи Smart Web Security
 
-Описание сценария и инструкция по его применению.
-
-Для практических руководств обязательна ссылка на документацию.
+С помощью сервиса [Smart Web Security](https://cloud.yandex.ru/ru/docs/smartwebsecurity) вы можете настроить дополнительную защиту для [API-шлюза](https://cloud.yandex.ru/ru/docs/api-gateway), чтобы защитить свое приложение от DDoS-атак и ботов на прикладном уровне L7 модели OSI. Настройка через Terraform описана в [практическом руководстве](https://cloud.yandex.ru/docs/tutorials/serverless/api-gw-sws-integration), необходимый для настройки конфигурационный файл [api-gw-sws-integration.tf](api-gw-sws-integration.tf) расположен в этом репозитории.
